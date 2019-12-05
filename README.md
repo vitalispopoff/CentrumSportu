@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-<p><i>SportHub</i> is a web based application providing an easy 24/7 access to a basic services offered by a gym network franchise to its customers, and staff.</p>
+<p><i>SportHub</i> is a web based application providing an easy 24/7 access to a list of basic services offered by a gym network franchise to its customers and staff.</p>
 <h3>Assumed app features</h3>
 <p>The basic functionality set of the application covers the business service model specified as follows:</p>
 <ol>
