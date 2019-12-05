@@ -19,7 +19,7 @@
 </li>
 <li>Availability to some of the additional features (e.g. group trainings) is restricted by capacities of the respective locations (i.e. room size, available equipment, assigned trainers/supervisors etc.).<br> Customer may book an additional service, although due to the aforementioned limitations his/hers attendance in the activity of the choice will not be guaranteed.</li>
 <li>The application is available to both customers and trainers respectively.</li>
-<li>The application is maintained by admin (with full access).</li>
+<li>The application is maintained by admin (with full access to profiles and control over the database content).</li>
 </ol>
 <h2>Implementation</h2>
 <p>The SportHub is designed using the MVC paradigm to utilize a PostgreSQL database, and a cross-platform accessible GUI communicating via Apache Tomcat Server. For further cutting corners, and hopefully gaining some additional respect points, the project is developed in Spring framework.</p>
