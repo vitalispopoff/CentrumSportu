@@ -17,8 +17,7 @@
 <li>other services<br>(e.g. massaging and chiropractic care, dietary care etc.).</li>
 </ul>
 </li>
-<li>Availability to some of the additional features (e.g. group trainings) is restricted by capacities of the respective locations <br>(i.e. room size, available equipment, assigned trainers/supervisors etc.).
-<br>Customer may book the additional service, although his/hers attendance in activity of the choice will not be guaranteed.</li>
+<li>Availability to some of the additional features (e.g. group trainings) is restricted by capacities of the respective locations (i.e. room size, available equipment, assigned trainers/supervisors etc.). Customer may book the additional service, although his/hers attendance in activity of the choice will not be guaranteed.</li>
 <li>The application is available to both customers and trainers respectively.</li>
 <li>The application is maintained by admin (with full access).</li>
 </ol>
