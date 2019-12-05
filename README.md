@@ -23,7 +23,8 @@
 <li>The application is maintained by admin (with full access).</li>
 </ol>
 <h2>Implementation</h2>
-<p>(...)</p>
+<p>The implementation of the app is based on a class structure pictured below.</p>
+<img src="_docs\SportHubClassStructure.png" alt="UML class structure picture (png format).">
 <h3>Versions</h3>
 <p>(...)</p>
 
