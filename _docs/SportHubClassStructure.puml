@@ -1,0 +1,73 @@
+@startuml
+class hub
+class staff
+class equipment
+
+class schedule
+class room
+
+abstract class training
+class organized
+class personalTraining
+class groupTraining
+
+training <|-- organized
+training <|--supervised
+
+organized <|-- groupTraining
+organized <|-- personalTraining
+
+
+staff o-- trainer
+
+abstract class person
+
+person <|-- customer
+person <|-- trainer
+
+class customer
+
+class trainer
+personalTrainer <--customer
+groupTrainer <--customer
+
+class personalTrainer
+class groupTrainer
+class supervisor
+
+trainer <|-- personalTrainer
+trainer <|-- groupTrainer
+trainer <|-- supervisor
+
+room o-- supervisor
+groupTraining o-- groupTrainer
+
+supervised o-- supervisor
+
+
+hub o-- room
+room o-- equipment
+schedule o-- training
+shedule o-- hub
+hub o-- staff
+customer <.. schedule
+
+subscription <--customer
+training <-- room
+
+class subscriptionTable
+
+subscriptionTable <|-- subscription
+subscriptionTable <-- training
+
+
+
+
+
+
+
+
+
+
+
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+
+/'entity training{
+idtraining
+--
+}'/
+
+entity room{
+idroom
+--
+}
+
+entity session{
+idsession
+--
+idtraining
+idtrainer
+idroom
+idtime
+}
+
+entity trainer{
+idtrainer
+--
+}
+
+
+/'entity customer{
+}'/
+
+
+
+
+
+
+session }o..|| room
+
+trainer ||..o{ session
+'customer}o..o{ training
+'customer }o..o| room
+'trainer }|..||room
+'trainer||..o{ customer
+
+
+
+
+
+
+@enduml
