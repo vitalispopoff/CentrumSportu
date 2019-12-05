@@ -41,14 +41,14 @@ trainer <|-- supervisor
 
 room o-- supervisor
 groupTraining o-- groupTrainer
-
+personalTraining o-- personalTrainer
 supervised o-- supervisor
 
 
 hub o-- room
 room o-- equipment
 schedule o-- training
-shedule o-- hub
+schedule o-- hub
 hub o-- staff
 customer <.. schedule
 
