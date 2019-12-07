@@ -41,7 +41,17 @@ CREATE TABLE reservation(
 	userid INT NOT NULL REFERENCES gymuser (userid),
 	workoutid INT NOT NULL REFERENCES workout (workoutid),
 	statusofreservation TEXT NOT NULL --  reservation status for when there more peeps than slots in the training
+);
 
+CREATE TABLE room(
+	roomid INT PRIMARY KEY NOT NULL,
+	roomcapacity INT NOT NULL
+);
+
+CREATE TABLE roomworkouttype(
+	roomworkouttypeid SERIAL PRIMARY KEY NOT NULL,
+	roomid INT REFERENCES room (roomid),
+	workouttypeid INT REFERENCES workouttype (workouttypeid)
 );
 
 

@@ -22,9 +22,13 @@
 <li>The application is maintained by admin (with full access to profiles and control over the database content).</li>
 </ol>
 <h2>Implementation</h2>
-<p>The SportHub is designed using the MVC paradigm to utilize a PostgreSQL database, and a cross-platform accessible GUI communicating via Apache Tomcat Server. For further cutting corners, and hopefully gaining some additional respect points, the project is developed in Spring framework.</p>
+<p>The SportHub is designed using the MVC paradigm to utilize a PostgreSQL database hosted on an external server, and a cross-platform accessible GUI communicating via Apache Tomcat Server. For further cutting corners, and hopefully gaining some additional respect points, the project is developed in Spring framework.</p>
 <p>The implementation of the app is based on a class structure pictured below.</p>
 <img src="_docs\SportHubClassStructure.png" alt="UML class structure picture (png format).">
+<p><br></p>
+<p>The main database structure is shown below.<br></p>
+<img src="_docs\SportHubDatabaseStructure.png" alt="UML table structure picture (png format).">
+
 
 <h3>Versions</h3>
 <ul>

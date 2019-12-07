@@ -1,45 +1,61 @@
 @startuml
 
-/'entity training{
-idtraining
+Entity usertype{
+* PK usertypeid SERIAL
+}
+
+entity gymuser{
+* PK userid INT
 --
-}'/
+* FK usertypeid
+}
+
+entity workouttype{
+* PK workouttypeid SERIAL
+}
+
+entity workout{
+* PK workoutid SERIAL
+--
+* FK workouttypeid
+* FK userid
+* FK roomid
+}
+
+entity pass{
+* PK passid SERIAL
+--
+* FK userid
+}
+
+entity reservation{
+* PK reservationid SERIAL
+--
+* FK userid
+* FK workoutid
+}
 
 entity room{
-idroom
---
+* PK roomid INT
 }
 
-entity session{
-idsession
+entity roomworkouttype{
+* PK roomworkouttypeid SERIAL
 --
-idtraining
-idtrainer
-idroom
-idtime
+* FK roomid
+* FK workouttypeid
 }
 
-entity trainer{
-idtrainer
---
-}
+usertype ||==o{gymuser
+workouttype||==o{workout
+workout||==o{gymuser
+workout||==o{reservation
+reservation||==o{gymuser
+pass||==o{gymuser
 
+roomworkouttype}|==|{room
+roomworkouttype}|==||workouttype
 
-/'entity customer{
-}'/
-
-
-
-
-
-
-session }o..|| room
-
-trainer ||..o{ session
-'customer}o..o{ training
-'customer }o..o| room
-'trainer }|..||room
-'trainer||..o{ customer
 
 
 
