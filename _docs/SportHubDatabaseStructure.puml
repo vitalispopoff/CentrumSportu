@@ -46,15 +46,17 @@ entity roomworkouttype{
 * FK workouttypeid
 }
 
-usertype ||==o{gymuser
+gymuser}o==||usertype
 workouttype||==o{workout
 workout||==o{gymuser
 workout||==o{reservation
+workout}o==o{room
 reservation||==o{gymuser
-pass||==o{gymuser
+gymuser}o==||pass
 
 roomworkouttype}|==|{room
-roomworkouttype}|==||workouttype
+
+workouttype||==|{roomworkouttype
 
 
 
