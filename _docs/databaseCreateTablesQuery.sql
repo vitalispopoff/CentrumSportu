@@ -31,9 +31,9 @@ CREATE TABLE workout(
 CREATE TABLE pass(
 	passid SERIAL PRIMARY KEY NOT NULL,
 	userid	INT		NOT NULL REFERENCES gymuser (userid),		-- should be a client only, how to make it happen?
-	startofaccess BIGINT NOT NULL,	--1st
-	endofaccess	BIGINT NOT NULL,	--2nd: first two in epochtime ms ?
-	daysofaccess INT				--3rd: isn't one of'em redundant? 
+	startofaccess TEXT NOT NULL,
+	endofaccess	TEXT NOT NULL,	
+--	daysofaccess INT			'tis but a scratch
 );
 
 CREATE TABLE reservation(
