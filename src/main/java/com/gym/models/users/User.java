@@ -18,7 +18,6 @@ public abstract class User {
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
-//    @Column(name="firstname")
     private String firstname;
 
     private String surname;
@@ -34,7 +33,6 @@ public abstract class User {
     }
 
     public User(String login, String password, String firstname, String surname, String mail, Icon profilePic) {
-//        finalUserId++;
         this.userId = finalUserId++;
         this.login = login;
         this.password = password;

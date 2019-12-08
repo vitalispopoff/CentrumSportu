@@ -45,7 +45,9 @@ CREATE TABLE reservation(
 
 CREATE TABLE room(
 	roomid INT PRIMARY KEY NOT NULL,
-	roomcapacity INT NOT NULL
+	roomcapacity INT NOT NULL,
+	equipment TEXT[],
+	allowedworkouts TEXT[]
 );
 
 CREATE TABLE roomworkouttype(
@@ -53,7 +55,6 @@ CREATE TABLE roomworkouttype(
 	roomid INT REFERENCES room (roomid),
 	workouttypeid INT REFERENCES workouttype (workouttypeid)
 );
-
 
 
 

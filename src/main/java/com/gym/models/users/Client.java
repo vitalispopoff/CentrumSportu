@@ -1,8 +1,5 @@
 package com.gym.models.users;
 
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.swing.*;
 
 public class Client extends User {
