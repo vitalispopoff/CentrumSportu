@@ -1,4 +1,4 @@
-# SportHub (CentrumSportu)
+# <img src="_docs\lamefronticon" alt="lame front icon"> SportHub (CentrumSportu)
 
 
 <h2>Description</h2>
