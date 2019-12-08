@@ -15,6 +15,8 @@ public class Reservation {
     @Column(name="reservationid")
     private int reservationId;
 
+    @OneToOne
+            @JoinColumn(name="userid", referencedColumnName = "userid")
     private Client client;
     private Workout workout;
 

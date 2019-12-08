@@ -2,10 +2,7 @@ package com.gym.models.workout;
 
 import com.gym.models.users.User;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -21,7 +18,10 @@ public class Pass {
     @Column(name="passid")
     private int passId;
 
+    @OneToOne
+    @JoinColumn(name="userid", referencedColumnName = "userid") // ? czego dotyczy referencedColumnName ?
     private User passOwner;
+
     private int daysOfAccess;
 
     @Column(name="endofaccess")

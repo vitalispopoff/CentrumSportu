@@ -29,11 +29,13 @@ public abstract class User {
     @Column(name="profilepic")
     private Icon profilePic;
 
-    public User() {}
+    public User() {
+        this.userId = finalUserId++;
+    }
 
     public User(String login, String password, String firstname, String surname, String mail, Icon profilePic) {
 //        finalUserId++;
-        this.userId = ++finalUserId;
+        this.userId = finalUserId++;
         this.login = login;
         this.password = password;
         this.firstname = firstname;

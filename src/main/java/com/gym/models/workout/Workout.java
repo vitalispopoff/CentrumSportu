@@ -20,7 +20,9 @@ public class Workout {
     private int maxNumberOfMembers;
 
     @Enumerated(EnumType.STRING)
+    @Column(name="workouttype")
     private WorkoutType workoutType;
+
     private Date date;
     private Room room;
 
@@ -37,10 +39,6 @@ public class Workout {
     public int getWorkoutId() {
         return workoutId;
     }
-
-   /* public void setId(int id) {
-        this.id = id;
-    }*/
 
     public WorkoutType getWorkoutType() {
         return workoutType;
