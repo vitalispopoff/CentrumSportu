@@ -1,25 +1,42 @@
 package com.gym.models.users;
 
+import javax.persistence.*;
 import javax.swing.*;
+import java.util.Objects;
 
+@Entity
+@Table(name="gymuser")
 public abstract class User {
 
-   private String login;
-   private String password;
-   private String name;
-   private  String surname;
-   private  String mail;
-   private int userId;
-   private static int finalUserId=0;
-   private UserType userType;
-   private Icon profilePic;
+    private static int finalUserId = 0;
 
-    public User(String login, String password, String name, String surname, String mail, Icon profilePic) {
-        finalUserId++;
-        this.userId = finalUserId;
+    @Id
+    @Column(name="userid")
+    private int userId;
+
+    @Column(name="usertype")
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
+
+//    @Column(name="firstname")
+    private String firstname;
+
+    private String surname;
+    private String mail;
+    private String login;
+    private String password;
+
+    @Column(name="profilepic")
+    private Icon profilePic;
+
+    public User() {}
+
+    public User(String login, String password, String firstname, String surname, String mail, Icon profilePic) {
+//        finalUserId++;
+        this.userId = ++finalUserId;
         this.login = login;
         this.password = password;
-        this.name = name;
+        this.firstname = firstname;
         this.surname = surname;
         this.mail = mail;
         this.profilePic = profilePic;
@@ -41,12 +58,12 @@ public abstract class User {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public String getSurname() {
@@ -87,5 +104,36 @@ public abstract class User {
 
     public void setProfilePic(Icon profilePic) {
         this.profilePic = profilePic;
+    }
+
+    @Override
+    public String toString() {
+        return "User{ "+
+                "usertype="+userType+
+                ", id="+
+                ", firstname="+firstname+
+                ", surname="+surname+
+                ", mail="+mail+
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return userId == user.userId &&
+                userType == user.userType &&
+                firstname.equals(user.firstname) &&
+                surname.equals(user.surname) &&
+                mail.equals(user.mail) &&
+                login.equals(user.login) &&
+                profilePic.equals(user.profilePic);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, userType, firstname, surname, mail, login, profilePic);
     }
 }

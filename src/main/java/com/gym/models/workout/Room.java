@@ -1,16 +1,31 @@
 package com.gym.models.workout;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.List;
 
+@Entity
+@Table(name="room")
 public class Room {
 
-    private int roomId = hashCode();
+    private int roomCounter=0;
+
+    @Id
+    @Column(name="roomid")
+    private int roomId;
+
+    @Column(name="roomcapacity")
     private int roomCapacity;
     private boolean booked;
     private String equipment;
     private List<WorkoutType> allowedWorkouts;
 
+    public Room() {this.roomId=roomCounter++;}
+
     public Room(int roomCapacity, boolean booked, String equipment, List<WorkoutType> allowedWorkouts) {
+        this.roomId=roomCounter++;
         this.roomCapacity = roomCapacity;
         this.booked = booked;
         this.equipment = equipment;

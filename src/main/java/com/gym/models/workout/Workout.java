@@ -1,16 +1,33 @@
 package com.gym.models.workout;
 
+import com.gym.models.users.User;
+
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 
+@Entity
+@Table(name="workout")
 public class Workout {
 
-    private int workoutId = hashCode();
+    private int workoutCounter=0;
+
+    @Id
+    @Column(name="workoutid")
+    private int workoutId;
+
+    @Column(name="maxnumberofmembers")
+    private int maxNumberOfMembers;
+
+    @Enumerated(EnumType.STRING)
     private WorkoutType workoutType;
     private Date date;
     private Room room;
-    private int maxNumberOfMembers;
+
+    public Workout() {this.workoutId=workoutCounter++;}
 
     public Workout(WorkoutType workoutType, Date date, Room room) {
+        this.workoutId=workoutCounter++;
         this.workoutType = workoutType;
         this.date = date;
         this.room = room;

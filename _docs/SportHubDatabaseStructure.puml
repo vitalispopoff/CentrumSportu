@@ -1,8 +1,8 @@
 @startuml
 
-Entity usertype{
+/'Entity usertype{
 * PK usertypeid SERIAL
-}
+}'/
 
 entity gymuser{
 * PK userid INT
@@ -46,7 +46,7 @@ entity roomworkouttype{
 * FK workouttypeid
 }
 
-gymuser}o==||usertype
+'gymuser}o==||usertype
 workouttype||==o{workout
 workout||==o{gymuser
 workout||==o{reservation

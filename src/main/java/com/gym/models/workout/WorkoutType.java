@@ -7,18 +7,29 @@ public enum WorkoutType {
     BODYBALANCE,
     BODYPUMP,
     BOXING,
+    CARDIO,
+    CLIMBING,
     CYCLE,
+    DANCE,
     FITNESS,
     FLOW_YOGA,
-    CARDIO,
+    PARKOUR,
     PILATES,
     RPM,
     SCULPT,
     SHOCKWAVE,
+    SKATING,
     STRENGTH,
     STRETCH,
+    SWIMMING,
     TAI_CHI,
+    WEIGHTLIFTING,
     YOGA,
-    ZUMBA
+    ZUMBA,
+
+
+
+
+
 
 }
